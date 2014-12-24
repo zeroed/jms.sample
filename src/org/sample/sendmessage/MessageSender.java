@@ -54,13 +54,14 @@ import javax.jms.Queue;
 public class MessageSender {
 
     @Inject
-    @JMSConnectionFactory("jms/TestConnectionFactory")
+    @JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
     JMSContext context;
     
-    @Resource(mappedName="jms/testQueue")
+    @Resource(mappedName="jms/queue")
     Queue queue;
 
     public void sendMessage(String message) {
+    	System.out.printf("Sending message: %s.\n", message);
         context.createProducer().send(queue, message);
     }
 }

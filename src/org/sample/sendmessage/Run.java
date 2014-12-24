@@ -56,11 +56,11 @@ import javax.servlet.http.HttpServletResponse;
  * @author eddie
  */
 @JMSDestinationDefinition(
-		name = "jms/testQueue",
+		name = "jms/queue",
         resourceAdapter = "jmsra",
         className = "javax.jms.Queue",
-        destinationName="jms/testQueue",
-        description="jms/testQueue", 
+        destinationName="jms/queue",
+        description="jms/queue", 
         interfaceName = "javax.jms.Queue")
 @WebServlet(
 		description = "Run Request", 
@@ -73,9 +73,6 @@ import javax.servlet.http.HttpServletResponse;
 		})
 public class Run extends HttpServlet {
     
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@EJB MessageSender sender;
