@@ -51,7 +51,7 @@ import javax.jms.TextMessage;
  * @author Arun Gupta
  * @author eddie
  */
-@MessageDriven(mappedName = "jms/testQueue")
+//@MessageDriven(mappedName = "jms/testQueueAsync")
 public class MessageReceiverAsync implements MessageListener {
 
     @Override
