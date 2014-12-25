@@ -49,7 +49,28 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>JMS 2 Send Message</h1>
-        <a href="/run" >Send and Receive</a> the message.
+        <h3>JMS 2 Send Message</h3>
+        <p>
+        	<pre>
+        		<code>
+        		/*
+		         * To run this you require Glassfish (4.1):
+				 *  
+				 *  /opt/glassfish4.1/bin/asadmin start-domain
+				 *  /opt/glassfish4.1/bin/asadmin start-domain
+				 *  /opt/glassfish4.1/bin/asadmin deploy -force target/sample.jms-0.0.1.war 
+				 *  
+				 *  JNDI Name: jms/__defaultConnectionFactory
+				 *  Local JNDI Name: java:comp/DefaultJMSConnectionFactory
+				 *  Resource Type: javax.jms.ConnectionFactory
+				 *  
+				 *  JNDI Name: jms/queue
+				 *  Physical Destination Name: queue
+				 *  Resource Type: javax.jms.Queue
+				 */
+        		</code>
+        	</pre>
+        </p>
+        <a href="jms.sample/run" >Send and Receive</a> the message.
     </body>
 </html>

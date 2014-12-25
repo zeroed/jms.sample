@@ -54,6 +54,16 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author Arun Gupta
  * @author eddie
+ * 
+ * To run this you require:
+ *  
+ *  JNDI Name: jms/__defaultConnectionFactory
+ *  Local JNDI Name: java:comp/DefaultJMSConnectionFactory
+ *  Resource Type: javax.jms.ConnectionFactory
+ *  
+ *  JNDI Name: jms/queue
+ *  Physical Destination Name: queue
+ *  Resource Type: javax.jms.Queue
  */
 @JMSDestinationDefinition(
 		name = "jms/queue",
